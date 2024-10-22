@@ -14,12 +14,12 @@
         <button onclick="readFile()">Click me</button>
 
     </div>
+    <script src="fileEditor.js">
+        function readFile()
+        {
+            var str = Read();
+            $('#result').text(str);
+        }
+    </script>
 </body>
-<script src="fileEditor.js">
-    function readFile()
-    {
-        var str = Read();
-        $('#result').text(str);
-    }
-</script>
 </html>

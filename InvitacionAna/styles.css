@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+
+@font-face {
+    font-family: 'Molle';
+    src: url('fonts/Molle.ttf');
+}
+
+@font-face {
+    font-family: 'Baristo';
+    src: url('fonts/Baristo.ttf');
+}
+
+@font-face {
+    font-family: 'Eras';
+    src: url('fonts/ERASMD.TTF');
+}
+
+@font-face {
+    font-family: 'ITC';
+    src: url('fonts/ITCEDSCR.TTF');
+}
+
+@font-face {
+    font-family: 'Kristen';
+    src: url('fonts/ITCKRIST.TTF');
+}
+
+
+body {
+    height: 100vmax;
+    background: linear-gradient(180deg, rgba(132,198,255,1) 50%, rgba(148,214,255,1) 70%, rgba(148,214,255,1) 100%), rgba(148,214,255,1);
+}
+
+body .m-wrapper {
+    /*min-width: 100%;*/
+    margin: auto 5%;
+}
+
+.border-right-orchid { border-right: 5px dotted #ff6bebcc; }
+
+.border-top-orchid { border-top: 5px dotted #ff6bebcc; }
+
+.border-left-orchid { border-left: 5px dotted #ff6bebcc; }
+
+.border-bottom-orchid { border-bottom: 5px dotted #ff6bebcc; }
+
+.border-orchid { border: 5px dotted #ff6bebcc; }
+
+.ff-baristo { font-family: 'Baristo'; }
+.ff-itc { font-family: 'ITC'; }
+.ff-kristen { font-family: 'Kristen'; }
+.ff-dynapuff
+{
+    font-family: "DynaPuff", system-ui;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+.ff-molle {
+    font-family: "Molle", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+  
+h2.purple-text
+{
+    color: blueviolet;
+    font-family: 'DynaPuff';
+    font-weight: lighter;
+    font-size: calc(2.2rem + 1vw - 0.3rem);
+}
+  
+.purple-text
+{
+    color: blueviolet;
+    font-family: 'DynaPuff';
+    font-weight: lighter;
+    font-size: calc(2.3rem + 1vw - 0.3rem);
+}
+
+.pink-text
+{
+    color: hotpink;
+    font-family: 'DynaPuff';
+    font-weight: bold;
+    font-size: xx-large;
+    font-size: calc(3rem + 1.5vw);
+}
+
+#PartyData span
+{
+    line-height: normal;
+}
+
+.btn-orchid {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #ff56ab;
+    --bs-btn-border-color: #d80065;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #ff87c3;
+    --bs-btn-hover-border-color: #d80065;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #d80065;
+    --bs-btn-active-border-color: #d80065;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #ff87c3;
+    --bs-btn-disabled-border-color: #ff87c3;
+}
+
+h1 {
+    font-size: calc(7.5rem + .8vw);
+}
+
+h2 {
+    font-size: calc(2rem + .6vw);
+}
+
+h2 > b {
+    font-size: calc(3rem + .8vw);
+}
+
+h3 {
+    font-size: calc(2.5rem + .6vw);
+}
+
+h4 {
+    font-size: calc(2rem + .6vw);
+}
+
+h1, h2, h3, h4, span {
+    text-shadow: 0px 0px 30px #FFF;
+}
+
+.fs-1
+{
+    font-size: calc(3rem + 1vw) !important;
+    line-height: 4rem;
+}
+
+.bg-main {
+    background-color: #efe1ff;
+}
+
+.cover {
+    display: block;
+    margin: 0;
+    position: fixed;
+    z-index: 10;
+    background-color: #eee;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0;
+}
+
+.envelope
+{
+    width: 100%;
+    height: 100%;
+}
+
+.envelope .top
+{
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    width: 100vw;
+    height: 100vw;
+    transform: rotate(45deg) skew(-10deg, -10deg);
+    border-bottom: 10px solid black;
+    border-right: 10px solid black;
+    z-index: 11;
+    background: #eee;
+    transition: all 300ms ease;
+}
+
+.envelope .top button
+{
+    display: block;
+    position: absolute;
+    bottom: -100px;
+    right: calc(-130px - 100px);
+    transform: rotate(-45deg) skew(0deg, 0deg) scaleX(0.8);
+    font-size: 10rem;
+    padding: 2rem 5rem;
+}
+
+.anim-up {
+    animation: up 0.5s ease forwards;
+}
+
+.anim-down {
+    animation: down 500ms 50ms ease forwards;
+}
+
+@keyframes up {
+    from {
+        transform: rotate(45deg) skew(-10deg, -10deg) translate(0px, 0px);
+        opacity: 1;
+    }
+
+    to {
+        transform: rotate(45deg) skew(-10deg, -10deg) translate(-1000%, -1000%);
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes down {
+    from {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(0px, 150%);
+        opacity: 0;
+        display: none;
+    }
+}

@@ -73,6 +73,7 @@
 							<span class="pink-text" id="seconds"> 00</span>
 						</div>
 						<button onclick="GoToAssistance()" class="btn btn-orchid fs-1 ff-dynapuff p-4">Confirmar mi Asistencia</button>
+						<!--<a href="GoToAssistance()" class="btn btn-orchid fs-1 ff-dynapuff p-4">Confirmar mi Asistencia</a>-->
 					</div>
 				</div>
 			</div>
@@ -89,8 +90,10 @@
 
 		function GoToAssistance()
 		{
-			$('input', '#Secret').prop('value', document.getElementById("Music").currentTime);
-			$('#Secret').submit();
+			//$('input', '#Secret').prop('value', document.getElementById("Music").currentTime);
+			//$('#Secret').submit();
+			var text = encodeURIComponent("Hola!\nQuiero confirmar nuestra asistencia\nPodremos asistir/No podremos asistir\nAdultos:\nHijos:");
+			location.href='http://www.wa.me/529212600417?text=' + text;
 		}
 
 		var i = setInterval(autoNotify, 10);
